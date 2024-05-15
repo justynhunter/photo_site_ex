@@ -2,6 +2,7 @@ defmodule PhotoSiteWeb.IndexLive do
   use PhotoSiteWeb, :live_view
 
   def mount(_params, _session, socket) do
+    socket = assign(socket, :page_title, "justyn hunter")
     {:ok, assign(socket, :photo, get_photo(1, 1))}
   end
 
