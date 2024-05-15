@@ -164,4 +164,10 @@ form {
     max-width: 512px;
     margin: auto;
     text-align: left;
+
+    & h3 {
+        all: unset;
+        text-decoration: underline;
+        font-weight: bold;
+    }
 }
