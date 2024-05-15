@@ -1,0 +1,17 @@
+<header>
+  <div>
+    <.link navigate={~p"/"}><h1>justyn hunter</h1></.link>
+  </div>
+  <div class="link_container">
+    <.link navigate={~p"/about"}>about</.link>
+    <.link navigate={~p"/contact"}>contact</.link>
+    <a href="https://www.instagram.com/justynh">insta</a>
+    <a href="https://www.flickr.com/photos/j_hunter">flickr</a>
+  </div>
+</header>
+<main>
+  <%= @inner_content %>
+</main>
+<footer>
+  <div>copyright <%= DateTime.utc_now |> Map.fetch!(:year) %>, all rights reserved.</div>
+</footer>
