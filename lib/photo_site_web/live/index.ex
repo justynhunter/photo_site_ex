@@ -2,7 +2,7 @@ defmodule PhotoSiteWeb.IndexLive do
   use PhotoSiteWeb, :live_view
 
   def mount(_params, _session, socket) do
-    {:ok, assign(socket, page_title: "justyn hunter", photo: get_photo(1, 1))}
+    {:ok, assign(socket, page_title: "justyn hunter", photo: get_photo(1))}
   end
 
   def render(assigns) do
@@ -16,15 +16,15 @@ defmodule PhotoSiteWeb.IndexLive do
   end
 
   def handle_event("prev", _, socket) do
-    {:noreply, assign(socket, :photo, get_photo(1, socket.assigns.photo.seq - 1))}
+    {:noreply, assign(socket, :photo, get_photo(socket.assigns.photo.seq - 1))}
   end
 
   def handle_event("next", _, socket) do
-    {:noreply, assign(socket, :photo, get_photo(1, socket.assigns.photo.seq + 1))}
+    {:noreply, assign(socket, :photo, get_photo(socket.assigns.photo.seq + 1))}
   end
 
-  def get_photo(album_id, seq) do
-    photos = PhotoSite.Repo.all(PhotoSite.Photo, album_id: album_id)
+  def get_photo(seq) do
+    photos = PhotoSite.Repo.all(PhotoSite.Photo, name: "default")
 
     max_seq = Enum.max_by(photos, & &1.seq).seq
     min_seq = Enum.min_by(photos, & &1.seq).seq
