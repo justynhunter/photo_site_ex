@@ -18,11 +18,8 @@ defmodule PhotoSiteWeb.ContactLive do
   end
 
   def handle_event("save", params, socket) do
-    IO.puts("hello")
-    IO.inspect(socket.assigns)
-    IO.inspect(params)
-    IO.inspect(params["user_name"])
-    IO.inspect(params["message"])
+    contact_form = %PhotoSite.ContactForm{name: params["user_name"], message: params["message"]}
+    PhotoSite.Repo.insert(contact_form)
     {:noreply, socket}
   end
 end
