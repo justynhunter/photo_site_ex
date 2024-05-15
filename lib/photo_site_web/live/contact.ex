@@ -2,8 +2,7 @@ defmodule PhotoSiteWeb.ContactLive do
   use PhotoSiteWeb, :live_view
 
   def mount(_params, _session, socket) do
-    socket = assign(socket, page_title: "contact")
-    {:ok, assign(socket, form: %{"user_name" => "", "message" => ""})}
+    {:ok, assign(socket, page_title: "contact", form: %{"user_name" => "", "message" => ""})}
   end
 
   def render(assigns) do

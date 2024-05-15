@@ -2,8 +2,7 @@ defmodule PhotoSiteWeb.IndexLive do
   use PhotoSiteWeb, :live_view
 
   def mount(_params, _session, socket) do
-    socket = assign(socket, :page_title, "justyn hunter")
-    {:ok, assign(socket, :photo, get_photo(1, 1))}
+    {:ok, assign(socket, page_title: "justyn hunter", photo: get_photo(1, 1))}
   end
 
   def render(assigns) do
@@ -17,17 +16,11 @@ defmodule PhotoSiteWeb.IndexLive do
   end
 
   def handle_event("prev", _, socket) do
-    new_photo = get_photo(1, socket.assigns.photo.seq - 1)
-    IO.inspect(new_photo)
-
-    {:noreply, assign(socket, :photo, new_photo)}
+    {:noreply, assign(socket, :photo, get_photo(1, socket.assigns.photo.seq - 1))}
   end
 
   def handle_event("next", _, socket) do
-    new_photo = get_photo(1, socket.assigns.photo.seq + 1)
-    IO.inspect(new_photo)
-
-    {:noreply, assign(socket, :photo, new_photo)}
+    {:noreply, assign(socket, :photo, get_photo(1, socket.assigns.photo.seq + 1))}
   end
 
   def get_photo(album_id, seq) do
