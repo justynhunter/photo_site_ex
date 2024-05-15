@@ -37,6 +37,10 @@ header {
     }
 }
 
+#header_title {
+    margin-right: 24px;
+}
+
 main {
     text-align: center;
 }
