@@ -2,7 +2,7 @@ defmodule PhotoSiteWeb.IndexLive do
   use PhotoSiteWeb, :live_view
 
   def mount(_params, _session, socket) do
-    {:ok, assign(socket, :photo, get_photo(1))}
+    {:ok, assign(socket, page_title: "justyn hunter", photo: get_photo(1))}
   end
 
   def render(assigns) do
@@ -16,48 +16,26 @@ defmodule PhotoSiteWeb.IndexLive do
   end
 
   def handle_event("prev", _, socket) do
-    new_photo =
-      socket.assigns.photo.id
-      |> prev_id()
-      |> get_photo()
-
-    {:noreply, assign(socket, :photo, new_photo)}
+    {:noreply, assign(socket, :photo, get_photo(socket.assigns.photo.seq - 1))}
   end
 
   def handle_event("next", _, socket) do
-    new_photo =
-      socket.assigns.photo.id
-      |> next_id()
-      |> get_photo()
-
-    {:noreply, assign(socket, :photo, new_photo)}
+    {:noreply, assign(socket, :photo, get_photo(socket.assigns.photo.seq + 1))}
   end
 
-  def next_id(id) when id == 3, do: 1
-  def next_id(id), do: id + 1
+  def get_photo(seq) do
+    photos = PhotoSite.Repo.all(PhotoSite.Photo, name: "default")
 
-  def prev_id(id) when id == 1, do: 3
-  def prev_id(id), do: id - 1
+    max_seq = Enum.max_by(photos, & &1.seq).seq
+    min_seq = Enum.min_by(photos, & &1.seq).seq
 
-  def get_photo(id) do
-    photos = [
-      %{
-        id: 1,
-        src: "https://live.staticflickr.com/65535/53609244371_184f1a88c1_b.jpg",
-        alt: "rotting house"
-      },
-      %{
-        id: 2,
-        src: "https://live.staticflickr.com/65535/53684852131_5d1a0c2a54_b.jpg",
-        alt: "chimney"
-      },
-      %{
-        id: 3,
-        src: "https://live.staticflickr.com/65535/53684851241_bac2ceb36b_b.jpg",
-        alt: "rotting house"
-      }
-    ]
+    seq =
+      cond do
+        seq > max_seq -> 1
+        seq < min_seq -> max_seq
+        true -> seq
+      end
 
-    Enum.find(photos, &(&1.id == id))
+    Enum.find(photos, &(&1.seq == seq))
   end
 end

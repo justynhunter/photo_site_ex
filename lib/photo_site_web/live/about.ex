@@ -2,7 +2,7 @@ defmodule PhotoSiteWeb.AboutLive do
   use PhotoSiteWeb, :live_view
 
   def mount(_params, _session, socket) do
-    {:ok, assign(socket, :about, %{})}
+    {:ok, assign(socket, :page_title, "about")}
   end
 
   def render(assigns) do
