@@ -17,7 +17,8 @@ defmodule PhotoSiteWeb.ContactLive do
         <.form for={@form} phx-submit="save" phx-target{@myself}>
           <.input type="text" name="user_name" label="name" value="" field={@form["user_name"]} />
           <.input type="textarea" name="message" label="message" value="" field={@form["message"]} />
-          <button>send</button>
+          <Turnstile.widget theme="light" />
+          <button type="submit">send</button>
         </.form>
       </div>
     <% else %>
@@ -29,8 +30,23 @@ defmodule PhotoSiteWeb.ContactLive do
   end
 
   def handle_event("save", params, socket) do
-    contact_form = %PhotoSite.ContactForm{name: params["user_name"], message: params["message"]}
-    PhotoSite.Repo.insert(contact_form)
-    {:noreply, assign(socket, show_form: false)}
+    case Turnstile.verify(params) do
+      {:ok, _} ->
+        contact_form = %PhotoSite.ContactForm{
+          name: params["user_name"],
+          message: params["message"]
+        }
+
+        PhotoSite.Repo.insert(contact_form)
+        {:noreply, assign(socket, show_form: false)}
+
+      {:error, _} ->
+        socket =
+          socket
+          |> put_flash(:error, "Please try submitting again")
+          |> Turnstile.refresh()
+
+        {:noreply, socket}
+    end
   end
 end

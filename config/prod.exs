@@ -16,12 +16,5 @@ config :swoosh, local: false
 # Do not print debug messages in production
 config :logger, level: :info
 
-# Ecto
-config :photo_site, PhotoSite.Repo,
-  username: System.get_env(""),
-  password: System.get_env(""),
-  hostname: System.get_env(""),
-  database: System.get_env("")
-
 # Runtime production configuration, including reading
 # of environment variables, is done on config/runtime.exs.
