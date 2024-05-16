@@ -10,6 +10,10 @@ import Config
 config :photo_site,
   ecto_repos: [PhotoSite.Repo]
 
+config :phoenix_turnstile,
+  site_key: System.get_env("TURNSTILE_SITE_KEY"),
+  secret_key: System.get_env("TURNSTILE_SECRET_KEY")
+
 # Configures the endpoint
 config :photo_site, PhotoSiteWeb.Endpoint,
   url: [host: "localhost"],
