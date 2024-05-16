@@ -14,23 +14,26 @@ defmodule PhotoSiteWeb.AboutLive do
       </p>
 
       <p>
-        other work may be found at the <a href="https://collective.photos">"some photographers"</a>
+        other work may be found at the "<a href="https://collective.photos">some photographers</a>"
         collective.
       </p>
 
       <h3>published</h3>
       <ul>
         <li>
-          <em>All Adults Here</em> - Cover Photo - Penguin (9781405921596), UK, 2021
+          <a href="https://www.penguin.co.uk/books/284669/all-adults-here-by-straub-emma/9781405921596">
+            <em>All Adults Here</em>
+          </a>
+          - Cover Photo - Penguin (9781405921596), UK, 2021
         </li>
         <li>
-          <em>Investigations in Infrastructure</em>, Subjectively Objective, Rochester Hills, MI, 2022
+          <a href="https://subjectivelyobjective.com/product/investigations-in-infrastructure/"><em>Investigations in Infrastructure</em></a>, Subjectively Objective, Rochester Hills, MI, 2022
         </li>
         <li>
-          <em>Everything is Narrative</em>, Subjectively Objective, Rochester Hills, MI, 2022
+          <a href="https://subjectivelyobjective.com/product/everything-is-narrative/"><em>Everything is Narrative</em></a>, Subjectively Objective, Rochester Hills, MI, 2022
         </li>
         <li>
-          <em>Slow Exposures 2024</em>, Georgia (jurors: Alexa Dilworth, Aline Smithson)
+          <a href="https://www.slowexposures.org/main-exhibit/2023-main-exhibit/"><em>Slow Exposures 2023</em></a>, Georgia (jurors: Alexa Dilworth, Aline Smithson)
         </li>
       </ul>
     </div>
