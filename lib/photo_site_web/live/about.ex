@@ -9,7 +9,7 @@ defmodule PhotoSiteWeb.AboutLive do
     ~H"""
     <div id="cv">
       <p>
-        Justyn Hunter lives in Nashville, TN and documents the America south with an emphasis an human inhabited space,
+        Justyn Hunter lives in Nashville, TN and documents the America south with an emphasis on human inhabited space,
         the past and religious iconography.
       </p>
 
