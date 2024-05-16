@@ -14,7 +14,7 @@ alias PhotoSite.Repo
 alias PhotoSite.Album
 alias PhotoSite.Photo
 
-unless Repo.exists?(Album, & &1.name == "default") do
+unless Repo.exists?(Album, name: "default") do
   default_album = %Album{name: "default", description: "default album for home page"}
 
   {_, default_album} = Repo.insert(default_album)
