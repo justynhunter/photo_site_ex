@@ -21,6 +21,9 @@ defmodule PhotoSiteWeb.AboutLive do
       <h3>published</h3>
       <ul>
         <li>
+          <em>All Adults Here</em> - Cover Photo - Penguin UK - 9781405921596 - 2021
+        </li>
+        <li>
           <em>Investigations in Infrastructure</em>, Subjectively Objective, Rochester Hills, MI, 2022
         </li>
         <li>
