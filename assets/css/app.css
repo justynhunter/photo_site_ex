@@ -37,6 +37,16 @@ header {
     }
 }
 
+@media screen and (max-width: 440px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    header .link_container {
+        font-size: 16px;
+    }
+}
+
 #header_title {
     margin-right: 24px;
 }
