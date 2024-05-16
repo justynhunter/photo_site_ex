@@ -11,28 +11,32 @@ body {
     color: var(--font-color);
 }
 
+a {
+    text-decoration: none;
+    color: var(--font-color);
+    border-bottom: 1px dotted var(--font-color);
+
+    &:hover {
+        border-bottom: none;
+        text-decoration: underline;
+    }
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     padding-bottom: 25px;
 
-    & a {
-        text-decoration: none;
-        color: var(--font-color);
-    }
-
     & .link_container {
         display: flex;
         font-size: 18px;
 
         & a {
+            border-bottom: none;
+            font-weight: normal;
             padding-left: 10px;
 
-            &:hover {
-                text-decoration: underline;
-                text-decoration-color: darkred;
-            }
         }
     }
 }
