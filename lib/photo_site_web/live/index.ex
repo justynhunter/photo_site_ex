@@ -20,7 +20,7 @@ defmodule PhotoSiteWeb.IndexLive do
   end
 
   def handle_event("next", _, socket) do
-    {:noreply, assign(socket, :photo, get_photo(socket.assigns.photo.seq + 1))}
+    {:noreply, assign(socket, photo: get_photo(socket.assigns.photo.seq + 1))}
   end
 
   def get_photo(seq) do
