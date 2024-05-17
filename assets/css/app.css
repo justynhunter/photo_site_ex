@@ -41,16 +41,6 @@ header {
     }
 }
 
-@media screen and (max-width: 440px) {
-    header h1 {
-        font-size: 18px;
-    }
-
-    header .link_container {
-        font-size: 16px;
-    }
-}
-
 #header_title {
     margin-right: 24px;
 }
@@ -121,6 +111,10 @@ form {
     animation: fade_in 500ms, forwards ease;
 }
 
+.hide {
+    display: none;
+}
+
 @keyframes fade_in {
     from {
         opacity: 0;
@@ -163,6 +157,8 @@ form {
     & img {
         width: 100%;
         max-width: 1024px;
+
+        margin-bottom: 10px;
     }
 
     & button {
@@ -170,27 +166,21 @@ form {
         position: absolute;
         height: 100%;
         max-height: 768px;
-        width: 150px;
+        width: 50%;
 
         background: transparent;
 
         border: none;
         padding: 0;
-    }
 
-    & #btn_prev {
-        left: 0;
-
-        &:hover {
-            background-image: linear-gradient(to right, rgba(0, 0, 0, .3), 40%, rgba(0, 0, 0, 0));
+        &:first-child {
+            left: 0;
+            cursor: w-resize;
         }
-    }
 
-    & #btn_next {
-        right: 0;
-
-        &:hover {
-            background: linear-gradient(to left, rgba(0, 0, 0, .3) 40%, rgba(0, 0, 0, 0));
+        &:last-child {
+            right: 0;
+            cursor: e-resize;
         }
     }
 }
@@ -205,5 +195,29 @@ form {
         all: unset;
         text-decoration: underline;
         font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    header .link_container {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .hide {
+        display: block;
+    }
+
+    .fade_in {
+        animation: unset;
+    }
+
+    #image_container button {
+        display: none;
     }
 }
