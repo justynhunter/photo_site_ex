@@ -113,7 +113,7 @@ form {
     margin: auto;
 }
 
-.blur_in {
+.focus_in {
     animation: focus_in 800ms forwards ease;
 }
 
