@@ -26,5 +26,7 @@ unless Repo.exists?(Album, name: "default") do
   Repo.insert(photo1)
   Repo.insert(photo2)
   Repo.insert(photo3)
+else
+  IO.puts("nothing to seed")
 end
 
