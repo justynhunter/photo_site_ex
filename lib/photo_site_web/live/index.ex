@@ -9,7 +9,7 @@ defmodule PhotoSiteWeb.IndexLive do
     ~H"""
     <div id="image_container">
       <button id="btn_prev" phx-click="prev" />
-      <img src={@photo.src} alt={@photo.alt} />
+      <img id="the_photo" src={@photo.src} alt={@photo.alt} phx-hook="FadeIn" />
       <button id="btn_next" phx-click="next" />
     </div>
     """
@@ -20,7 +20,7 @@ defmodule PhotoSiteWeb.IndexLive do
   end
 
   def handle_event("next", _, socket) do
-    {:noreply, assign(socket, :photo, get_photo(socket.assigns.photo.seq + 1))}
+    {:noreply, assign(socket, photo: get_photo(socket.assigns.photo.seq + 1))}
   end
 
   def get_photo(seq) do
