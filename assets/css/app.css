@@ -113,6 +113,24 @@ form {
     margin: auto;
 }
 
+.blur_in {
+    animation: focus_in 800ms forwards ease;
+}
+
+.fade_in {
+    animation: fade_in 500ms, forwards ease;
+}
+
+@keyframes fade_in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 @keyframes shadow_in {
     from {
         box-shadow: none;
@@ -125,7 +143,7 @@ form {
 
 @keyframes focus_in {
     from {
-        filter: blur(2px);
+        filter: blur(4px);
     }
 
     to {
