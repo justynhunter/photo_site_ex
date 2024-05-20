@@ -44,3 +44,9 @@ liveSocket.connect()
 // >> liveSocket.disableLatencySim()
 window.liveSocket = liveSocket
 
+
+document.getElementById("menu_link").addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById("dropdown").classList.add("show");
+});
+
