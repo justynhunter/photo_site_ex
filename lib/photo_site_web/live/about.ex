@@ -14,7 +14,7 @@ defmodule PhotoSiteWeb.AboutLive do
       </p>
 
       <p>
-        other work may be found at the "<a href="https://collective.photos">some photographers</a>"
+        other work may be found at the "<a href="https://collective.photos/justyn-hunter/selected-places">some photographers</a>"
         collective.
       </p>
 
