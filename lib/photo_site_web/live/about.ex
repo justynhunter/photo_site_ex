@@ -21,12 +21,6 @@ defmodule PhotoSiteWeb.AboutLive do
       <h3>published</h3>
       <ul>
         <li>
-          <a href="https://www.penguin.co.uk/books/284669/all-adults-here-by-straub-emma/9781405921596">
-            <em>All Adults Here</em>
-          </a>
-          - Cover Photo - Penguin (9781405921596), UK, 2021
-        </li>
-        <li>
           <a href="https://subjectivelyobjective.com/product/investigations-in-infrastructure/"><em>Investigations in Infrastructure</em></a>, Subjectively Objective, Rochester Hills, MI, 2022
         </li>
         <li>
