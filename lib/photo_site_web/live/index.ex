@@ -13,7 +13,7 @@ defmodule PhotoSiteWeb.IndexLive do
     <div id="image_container">
       <button id="btn_prev" phx-click="prev" />
       <%= for photo <- @photos do %>
-        <img id="the_photo" src={photo.src} alt={photo.alt} class={show_photo(@show, photo)} />
+        <img src={photo.src} alt={photo.alt} class={show_photo(@show, photo)} />
       <% end %>
       <button id="btn_next" phx-click="next" />
     </div>
