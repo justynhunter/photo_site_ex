@@ -18,6 +18,12 @@ defmodule PhotoSiteWeb.AboutLive do
         collective.
       </p>
 
+      <h3>socials</h3>
+      <ul>
+        <li><a href="https://www.instagram.com/justynh">instagram</a></li>
+        <li><a href="https://www.flickr.com/photos/j_hunter">flickr</a></li>
+      </ul>
+
       <h3>published</h3>
       <ul>
         <li>
