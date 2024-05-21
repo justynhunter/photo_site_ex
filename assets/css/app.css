@@ -146,6 +146,11 @@ form {
     }
 }
 
+#works_dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
 #dropdown {
     display: none;
     position: absolute;
