@@ -2,10 +2,11 @@ defmodule PhotoSiteWeb.IndexLive do
   use PhotoSiteWeb, :live_view
 
   alias PhotoSite.Repo, as: Repo
-  alias PhotoSite.Photo, as: Photo
+  alias PhotoSite.Album, as: Album
 
   def mount(_params, _session, socket) do
-    {:ok, assign(socket, page_title: "justyn hunter", show: 1, photos: get_photos())}
+    photos = get_album(1).photo
+    {:ok, assign(socket, page_title: "justyn hunter", show: 1, photos: photos)}
   end
 
   def render(assigns) do
@@ -35,10 +36,10 @@ defmodule PhotoSiteWeb.IndexLive do
     end
   end
 
-  defp get_photos() do
-    Photo
-    |> Repo.all()
-    |> Enum.sort_by(& &1.seq)
+  @spec get_album(integer()) :: Album
+  def get_album(album_id) do
+    Repo.get(Album, album_id)
+    |> Repo.preload(:photo)
   end
 
   defp get_next_seq(curr, photos) do
