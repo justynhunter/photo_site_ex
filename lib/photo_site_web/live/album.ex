@@ -6,12 +6,12 @@ defmodule PhotoSiteWeb.AlbumLive do
 
   def mount(params, _session, socket) do
     album = get_album(params["slug"])
-    {:ok, assign(socket, page_title: album.name, album_id: album.id)}
+    {:ok, assign(socket, page_title: album.name, album: album)}
   end
 
   def render(assigns) do
     ~H"""
-    <.live_component module={ImageCarousel} id="images" album_id={@album_id} />
+    <.live_component module={ImageCarousel} id="images" album={@album} />
     """
   end
 

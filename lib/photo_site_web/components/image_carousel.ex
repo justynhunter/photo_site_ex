@@ -9,7 +9,7 @@ defmodule ImageCarousel do
   end
 
   def update(assigns, socket) do
-    photos = get_album(assigns.album_id).photo
+    photos = assigns.album.photo
     {:ok, assign(socket, show: 1, photos: photos)}
   end
 
