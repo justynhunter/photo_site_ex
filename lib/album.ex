@@ -3,6 +3,7 @@ defmodule PhotoSite.Album do
 
   schema "album" do
     field :name, :string
+    field :slug, :string
     field :description, :string
     field :is_visible, :boolean
     field :created_at, :utc_datetime
