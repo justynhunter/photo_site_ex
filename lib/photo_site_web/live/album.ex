@@ -5,7 +5,7 @@ defmodule PhotoSiteWeb.AlbumLive do
   alias PhotoSite.Repo
 
   def mount(params, _session, socket) do
-    album = get_album(params["id"])
+    album = get_album(params["slug"])
     {:ok, assign(socket, page_title: album.name, album_id: album.id)}
   end
 
@@ -15,8 +15,8 @@ defmodule PhotoSiteWeb.AlbumLive do
     """
   end
 
-  def get_album(album_id) do
-    Repo.get(Album, album_id)
+  def get_album(slug) do
+    Repo.get_by(Album, slug: slug)
     |> Repo.preload(:photo)
   end
 end
