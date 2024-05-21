@@ -1,12 +1,11 @@
 defmodule WorksMenuComponent do
   use Phoenix.LiveComponent
 
-  alias PhotoSite.Album, as: Album
-  alias PhotoSite.Repo, as: Repo
+  alias PhotoSite.Album
+  alias PhotoSite.Repo
 
   def mount(socket) do
-    albums = get_albums()
-    {:ok, assign(socket, albums: albums, show_menu: false)}
+    {:ok, assign(socket, albums: Repo.all(Album), show_menu: false)}
   end
 
   def render(assigns) do
@@ -30,9 +29,5 @@ defmodule WorksMenuComponent do
       end
 
     {:noreply, socket}
-  end
-
-  def get_albums() do
-    Repo.all(Album)
   end
 end
