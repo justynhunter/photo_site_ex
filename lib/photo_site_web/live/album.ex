@@ -15,7 +15,6 @@ defmodule PhotoSiteWeb.AlbumLive do
     """
   end
 
-  @spec get_album(integer()) :: Album
   def get_album(album_id) do
     Repo.get(Album, album_id)
     |> Repo.preload(:photo)
