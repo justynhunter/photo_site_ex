@@ -1,9 +1,14 @@
+<script>
+  function worksClick() {
+      document.getElementById("dropdown").classList.add("show");
+  }
+</script>
 <header>
   <div id="header_title">
     <.link navigate={~p"/"}><h1>justyn hunter</h1></.link>
   </div>
   <div class="link_container">
-    <a href="#" id="menu_link">work</a>
+    <a onclick="worksClick()" id="menu_link">work</a>
     <ul id="dropdown">
       <li><a href="/">selected places</a></li>
       <li><a href="/">wildlife</a></li>
