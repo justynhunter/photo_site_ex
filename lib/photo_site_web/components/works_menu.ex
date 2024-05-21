@@ -14,7 +14,7 @@ defmodule WorksMenuComponent do
       <a id="menu_link" phx-click="works_click" phx-target={@myself}>work</a>
       <ul id="dropdown" class={@show_menu}>
         <%= for album <- @albums do %>
-          <li><a href={"/album/#{album.slug}"}><%= album.name %></a></li>
+          <li><.link navigate={"/#{album.slug}"}><%= album.name %></.link></li>
         <% end %>
       </ul>
     </div>
