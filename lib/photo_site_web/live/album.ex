@@ -16,7 +16,7 @@ defmodule PhotoSiteWeb.AlbumLive do
   end
 
   def get_album(slug) do
-    Repo.get_by(Album, slug: slug)
+    Repo.get_by!(Album, slug: slug)
     |> Repo.preload(:photo)
   end
 end
