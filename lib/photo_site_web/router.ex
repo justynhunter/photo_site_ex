@@ -19,6 +19,7 @@ defmodule PhotoSiteWeb.Router do
 
     live "/", IndexLive, :home
     live "/about", AboutLive, :page
+    live "/album/:id", AlbumLive, :page
     live "/contact", ContactLive, :page
   end
 
