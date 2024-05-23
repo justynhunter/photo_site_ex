@@ -1,4 +1,5 @@
 :root {
+    --bg-color: #fdfaf8;
     --font-color: #333;
 }
 
@@ -7,7 +8,7 @@ body {
     width: 90%;
     max-width: 1024px;
 
-    background-color: #fdfaf8;
+    background-color: var(--bg-color);
     color: var(--font-color);
 }
 
@@ -135,14 +136,52 @@ form {
     }
 }
 
+@keyframes grow_in {
+    from {
+        transform: scaleY(1.0);
+    }
+
+    to {
+        transform: scaleY(2.0);
+    }
+}
+
 @keyframes focus_in {
     from {
-        filter: blur(4px);
+        filter: blur(2px);
     }
 
     to {
         filter: blur(0px);
     }
+}
+
+#works_dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+#dropdown {
+    display: none;
+    opaction: 0;
+    position: absolute;
+    z-index: 5;
+
+    background-color: var(--bg-color);
+
+    list-style-type: none;
+    padding: 12px;
+    margin: 0;
+    margin-top: 18px;
+
+    & a {
+        padding: 0;
+    }
+}
+
+#dropdown.show {
+    display: inline;
+    animation: focus_in 250ms forwards ease;
 }
 
 #image_container {
