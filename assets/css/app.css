@@ -136,9 +136,19 @@ form {
     }
 }
 
+@keyframes grow_in {
+    from {
+        transform: scaleY(1.0);
+    }
+
+    to {
+        transform: scaleY(2.0);
+    }
+}
+
 @keyframes focus_in {
     from {
-        filter: blur(4px);
+        filter: blur(2px);
     }
 
     to {
@@ -153,6 +163,7 @@ form {
 
 #dropdown {
     display: none;
+    opaction: 0;
     position: absolute;
     z-index: 5;
 
@@ -170,6 +181,7 @@ form {
 
 #dropdown.show {
     display: inline;
+    animation: focus_in 250ms forwards ease;
 }
 
 #image_container {
