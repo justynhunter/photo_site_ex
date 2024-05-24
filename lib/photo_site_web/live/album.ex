@@ -11,6 +11,8 @@ defmodule PhotoSiteWeb.AlbumLive do
 
   def render(assigns) do
     ~H"""
+    <h2><%= @album.name %></h2>
+    <p><%= @album.description %></p>
     <.live_component module={ImageCarousel} id="images" album={@album} />
     """
   end
