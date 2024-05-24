@@ -20,6 +20,7 @@ defmodule PhotoSiteWeb.Router do
     live "/", IndexLive, :home
     live "/about", AboutLive, :page
     live "/contact", ContactLive, :page
+    live "/:slug", AlbumLive, :page
   end
 
   # Other scopes may use custom stacks.

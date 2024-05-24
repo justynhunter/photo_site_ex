@@ -18,16 +18,22 @@ defmodule PhotoSiteWeb.AboutLive do
         collective.
       </p>
 
+      <h3>socials</h3>
+      <ul>
+        <li><a href="https://www.instagram.com/justynh" target="_blank">instagram</a></li>
+        <li><a href="https://www.flickr.com/photos/j_hunter" target="_blank">flickr</a></li>
+      </ul>
+
       <h3>published</h3>
       <ul>
         <li>
-          <a href="https://subjectivelyobjective.com/product/investigations-in-infrastructure/"><em>Investigations in Infrastructure</em></a>, Subjectively Objective, Rochester Hills, MI, 2022
+          <a href="https://subjectivelyobjective.com/product/investigations-in-infrastructure/" target="_blank"><em>Investigations in Infrastructure</em></a>, Subjectively Objective, Rochester Hills, MI, 2022
         </li>
         <li>
-          <a href="https://subjectivelyobjective.com/product/everything-is-narrative/"><em>Everything is Narrative</em></a>, Subjectively Objective, Rochester Hills, MI, 2022
+          <a href="https://subjectivelyobjective.com/product/everything-is-narrative/" target="_blank"><em>Everything is Narrative</em></a>, Subjectively Objective, Rochester Hills, MI, 2022
         </li>
         <li>
-          <a href="https://www.slowexposures.org/main-exhibit/2023-main-exhibit/"><em>Slow Exposures 2023</em></a>, Georgia (jurors: Alexa Dilworth, Aline Smithson)
+          <a href="https://www.slowexposures.org/main-exhibit/2023-main-exhibit/" target="_blank"><em>Slow Exposures 2023</em></a>, Georgia (jurors: Alexa Dilworth, Aline Smithson)
         </li>
       </ul>
     </div>
