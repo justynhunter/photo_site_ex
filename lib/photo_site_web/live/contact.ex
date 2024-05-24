@@ -5,6 +5,7 @@ defmodule PhotoSiteWeb.ContactLive do
     {:ok,
      assign(socket,
        page_title: "contact",
+       page_descr: "contact page",
        show_form: true,
        form: %{"user_name" => "", "message" => ""}
      )}
