@@ -5,7 +5,7 @@ defmodule WorksMenuComponent do
   alias PhotoSite.Repo
 
   def mount(socket) do
-    {:ok, assign(socket, albums: Repo.all(Album) |> Enum.sort(&(&1 >= &2)), show_menu: false)}
+    {:ok, assign(socket, albums: Repo.all(Album) |> Enum.sort(&(&1 >= &2)), show_menu: "")}
   end
 
   def render(assigns) do

@@ -6,7 +6,7 @@ defmodule PhotoSiteWeb.AlbumLive do
 
   def mount(params, _session, socket) do
     album = get_album(params["slug"])
-    {:ok, assign(socket, page_title: album.name, album: album)}
+    {:ok, assign(socket, page_title: album.name, page_descr: album.description, album: album)}
   end
 
   def render(assigns) do
