@@ -130,4 +130,3 @@ unless Repo.exists?(Album) do
 else
   IO.puts("nothing to seed")
 end
-
