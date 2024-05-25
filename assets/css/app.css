@@ -10,6 +10,10 @@ body {
 
     background-color: var(--bg-color);
     color: var(--font-color);
+
+    font-family: "Rufina", serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 a {
