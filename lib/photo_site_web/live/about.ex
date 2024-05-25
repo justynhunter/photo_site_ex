@@ -14,11 +14,14 @@ defmodule PhotoSiteWeb.AboutLive do
       </p>
 
       <p>
-        other work may be found at the "<a href="https://collective.photos/justyn-hunter/selected-places" target="_blank">some photographers</a>"
+        other work may be found at the "<a
+          href="https://collective.photos/justyn-hunter/selected-places"
+          target="_blank"
+        >some photographers</a>"
         collective.
       </p>
 
-      <h3>socials</h3>
+      <h2>socials</h2>
       <ul>
         <li><a href="https://www.instagram.com/justynh" target="_blank">instagram</a></li>
         <li><a href="https://www.flickr.com/photos/j_hunter" target="_blank">flickr</a></li>

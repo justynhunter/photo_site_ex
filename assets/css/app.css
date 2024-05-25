@@ -261,7 +261,7 @@ form {
     margin: auto;
     text-align: left;
 
-    & h3 {
+    & h2, h3 {
         all: unset;
         text-decoration: underline;
         font-weight: bold;
