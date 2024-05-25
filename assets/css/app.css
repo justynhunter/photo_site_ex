@@ -116,6 +116,24 @@ form {
     margin: auto;
 }
 
+a#menu_link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+}
+
+.triangle_down {
+    margin-top: 2px;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 7px solid var(--font-color);
+    font-size: 0;
+    line-height: 0;
+}
+
 .focus_in {
     animation: focus_in 800ms forwards ease;
 }

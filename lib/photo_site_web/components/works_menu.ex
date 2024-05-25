@@ -11,7 +11,9 @@ defmodule WorksMenuComponent do
   def render(assigns) do
     ~H"""
     <div id="works_dropdown">
-      <a id="menu_link" phx-click="works_click" phx-target={@myself}>work</a>
+      <a id="menu_link" phx-click="works_click" phx-target={@myself}>
+        work <span class="triangle_down"></span>
+      </a>
       <ul id="dropdown" class={@show_menu}>
         <%= for album <- @albums do %>
           <li><.link navigate={"/#{album.slug}"}><%= album.name %></.link></li>
