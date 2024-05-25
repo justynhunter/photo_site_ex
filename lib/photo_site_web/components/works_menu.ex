@@ -11,7 +11,7 @@ defmodule WorksMenuComponent do
   def render(assigns) do
     ~H"""
     <div class="dropdown_menu">
-      <a phx-click="works_click" phx-target={@myself}>
+      <a href="#" phx-click="works_click" phx-target={@myself}>
         work <span class="triangle_down"></span>
       </a>
       <ul class={@show_menu}>
