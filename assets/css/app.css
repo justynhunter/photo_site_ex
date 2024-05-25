@@ -1,15 +1,18 @@
 :root {
-    --bg-color: #fdfaf8;
-    --font-color: #333;
+    --colors-bg: #fdfaf8;
+    --colors-link: #800000;
+    --colors-font: #333;
+
+    --page-max-width: 1024px;
 }
 
 body {
     margin: auto;
     width: 90%;
-    max-width: 1024px;
+    max-width: var(--page-max-width);
 
-    background-color: var(--bg-color);
-    color: var(--font-color);
+    background-color: var(--colors-bg);
+    color: var(--colors-font);
 
     font-family: "Rufina", serif;
     font-weight: 700;
@@ -18,14 +21,13 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--font-color);
-    border-bottom: 1px dotted var(--font-color);
-    background-image: linear-gradient(#800000, #800000);
+    color: var(--colors-link);
+    background-image: linear-gradient(var(--colors-link), var(--colors-link));
     background-size: 0% 0.1em;
     background-position-y: 100%;
     background-position-x: 100%;
     background-repeat: no-repeat;
-    transition: background-size 0.2s ease;
+    transition: background-size 0.2s ease-in-out;
 
     &:hover,
     &:focus,
@@ -50,6 +52,14 @@ header {
     justify-content: space-between;
     align-items: baseline;
     padding-bottom: 25px;
+
+    &.title {
+        margin-right: 24px;
+    }
+
+    & a {
+        color: var(--colors-font);
+    }
 
     & .link_container {
         display: flex;
@@ -116,12 +126,8 @@ form {
     }
 }
 
-#header_title {
-    margin-right: 24px;
-}
-
 #form_container {
-    max-width: 512px;
+    max-width: calc(var(--page-max-width) / 2);
     margin: auto;
 }
 
@@ -131,7 +137,7 @@ form {
     height: 0;
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
-    border-top: 7px solid var(--font-color);
+    border-top: 7px solid var(--colors-font);
     font-size: 0;
     line-height: 0;
 }
@@ -188,7 +194,7 @@ form {
         position: absolute;
         z-index: 5;
 
-        background-color: var(--bg-color);
+        background-color: var(--colors-bg);
 
         list-style-type: none;
         padding: 12px;
@@ -217,14 +223,14 @@ form {
     position: relative;
     margin: auto;
     width: 100%;
-    max-width: 1024px;
+    max-width: var(--page-max-width);
 
     opacity: 1;
     transition: opacity 400ms ease-out;
 
     & img {
         width: 100%;
-        max-width: 1024px;
+        max-width: var(--page-max-width);
         aspect-ratio: 4 / 3;
         object-fit: contain;
 
@@ -257,7 +263,7 @@ form {
 
 .copy_area {
     width: 100%;
-    max-width: 512px;
+    max-width: calc(var(--page-max-width) / 2);
     margin: auto;
     text-align: left;
 
