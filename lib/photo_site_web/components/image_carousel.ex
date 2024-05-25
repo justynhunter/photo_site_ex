@@ -15,10 +15,21 @@ defmodule ImageCarousel do
 
   def render(assigns) do
     ~H"""
-    <div id="image_container">
+    <div class="image_carousel">
       <button id="btn_prev" aria-label="previous photo" phx-click="prev" phx-target={@myself} />
       <%= for photo <- @photos do %>
-        <img loading={if photo.seq == 1 do "eager" else "lazy" end} src={photo.src} alt={photo.alt} class={show_photo(@show, photo)} />
+        <img
+          loading={
+            if photo.seq == 1 do
+              "eager"
+            else
+              "lazy"
+            end
+          }
+          src={photo.src}
+          alt={photo.alt}
+          class={show_photo(@show, photo)}
+        />
       <% end %>
       <button id="btn_next" aria-label="next photo" phx-click="next" phx-target={@myself} />
     </div>

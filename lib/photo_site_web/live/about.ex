@@ -7,7 +7,7 @@ defmodule PhotoSiteWeb.AboutLive do
 
   def render(assigns) do
     ~H"""
-    <div id="cv">
+    <div class="copy_area">
       <p>
         Justyn Hunter lives in Nashville, TN and documents the America south with an emphasis on human inhabited space,
         the past and religious iconography.

@@ -54,10 +54,6 @@ header {
     }
 }
 
-#header_title {
-    margin-right: 24px;
-}
-
 main {
     text-align: center;
 }
@@ -111,16 +107,13 @@ form {
     }
 }
 
+#header_title {
+    margin-right: 24px;
+}
+
 #form_container {
     max-width: 512px;
     margin: auto;
-}
-
-a#menu_link {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 3px;
 }
 
 .triangle_down {
@@ -132,14 +125,6 @@ a#menu_link {
     border-top: 7px solid var(--font-color);
     font-size: 0;
     line-height: 0;
-}
-
-.focus_in {
-    animation: focus_in 800ms forwards ease;
-}
-
-.fade_in {
-    animation: fade_in 500ms, forwards ease;
 }
 
 .hide {
@@ -156,6 +141,10 @@ a#menu_link {
     }
 }
 
+.fade_in {
+    animation: fade_in 500ms, forwards ease;
+}
+
 @keyframes shadow_in {
     from {
         box-shadow: none;
@@ -163,16 +152,6 @@ a#menu_link {
 
     to {
         box-shadow: inset 0 0 8px -2px #444;
-    }
-}
-
-@keyframes grow_in {
-    from {
-        transform: scaleY(1.0);
-    }
-
-    to {
-        transform: scaleY(2.0);
     }
 }
 
@@ -186,35 +165,46 @@ a#menu_link {
     }
 }
 
-#works_dropdown {
-    display: flex;
-    flex-direction: column;
+.focus_in {
+    animation: focus_in 800ms forwards ease;
 }
 
-#dropdown {
-    display: none;
-    opaction: 0;
-    position: absolute;
-    z-index: 5;
+.dropdown_menu {
+    display: flex;
+    flex-direction: column;
 
-    background-color: var(--bg-color);
+    & ul {
+        display: none;
+        opaction: 0;
+        position: absolute;
+        z-index: 5;
 
-    list-style-type: none;
-    padding: 12px;
-    margin: 0;
-    margin-top: 18px;
+        background-color: var(--bg-color);
+
+        list-style-type: none;
+        padding: 12px;
+        margin: 0;
+        margin-top: 18px;
+
+        & a {
+            padding: 0;
+        }
+
+        &.show {
+            display: inline;
+            animation: focus_in 250ms forwards ease;
+        }
+    }
 
     & a {
-        padding: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 3px;
     }
 }
 
-#dropdown.show {
-    display: inline;
-    animation: focus_in 250ms forwards ease;
-}
-
-#image_container {
+.image_carousel {
     position: relative;
     margin: auto;
     width: 100%;
@@ -256,7 +246,7 @@ a#menu_link {
     }
 }
 
-#cv {
+.copy_area {
     width: 100%;
     max-width: 512px;
     margin: auto;
