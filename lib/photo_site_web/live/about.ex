@@ -27,7 +27,10 @@ defmodule PhotoSiteWeb.AboutLive do
       <h3>published</h3>
       <ul>
         <li>
-          <a href="https://subjectivelyobjective.com/product/investigations-in-infrastructure/" target="_blank"><em>Investigations in Infrastructure</em></a>, Subjectively Objective, Rochester Hills, MI, 2022
+          <a
+            href="https://subjectivelyobjective.com/product/investigations-in-infrastructure/"
+            target="_blank"
+          ><em>Investigations in Infrastructure</em></a>, Subjectively Objective, Rochester Hills, MI, 2022
         </li>
         <li>
           <a href="https://subjectivelyobjective.com/product/everything-is-narrative/" target="_blank"><em>Everything is Narrative</em></a>, Subjectively Objective, Rochester Hills, MI, 2022
