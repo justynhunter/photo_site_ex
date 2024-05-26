@@ -1,5 +1,6 @@
 defmodule PhotoSiteWeb.Router do
   use PhotoSiteWeb, :router
+  use Kaffy.Routes, scope: "/admin", pipe_through: [:some_plug, :authenticate]
 
   pipeline :browser do
     plug :accepts, ["html"]

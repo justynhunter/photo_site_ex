@@ -24,6 +24,19 @@ config :photo_site, PhotoSiteWeb.Endpoint,
   pubsub_server: PhotoSite.PubSub,
   live_view: [signing_salt: "5694jZjD"]
 
+config :kaffy,
+  otp_app: :photo_site,
+  ecto_repo: PhotoSite.Repo,
+  router: PhotoSiteWeb.Router,
+  admin_title: "PhotoSite",
+  admin_logo: [
+    url: "",
+    style: ""
+  ],
+  admin_logo_mini: "",
+  hide_dashboard: true,
+  home_page: [schema: [:accounts, :user]]
+
 # Configures the mailer
 #
 # By default it uses the "Local" adapter which stores the emails
