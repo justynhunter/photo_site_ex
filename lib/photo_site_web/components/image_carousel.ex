@@ -1,9 +1,6 @@
 defmodule ImageCarousel do
   use Phoenix.LiveComponent
 
-  alias PhotoSite.Album
-  alias PhotoSite.Repo
-
   def mount(socket) do
     {:ok, assign(socket, page_title: "justyn hunter", show: 1, photos: %{})}
   end
@@ -51,15 +48,11 @@ defmodule ImageCarousel do
     end
   end
 
-  @spec get_album(integer()) :: Album
-  def get_album(album_id) do
-    Repo.get(Album, album_id)
-    |> Repo.preload(:photo)
-  end
-
   defp get_next_seq(curr, photos) do
-    max_seq = Enum.max_by(photos, & &1.seq).seq
-    min_seq = Enum.min_by(photos, & &1.seq).seq
+    {min_seq, max_seq} =
+      photos
+      |> Enum.min_max_by(& &1.seq)
+      |> (fn {min, max} -> {min.seq, max.seq} end).()
 
     case curr do
       n when n > max_seq -> 1
