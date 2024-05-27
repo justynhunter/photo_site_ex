@@ -20,10 +20,9 @@
     </header>
     <main>
       <h2>page not found</h2>
-      <p>return <.link navigate={~p"/"}>home</.link></p>
+      <p><.link navigate={~p"/"}>return home</.link></p>
     </main>
     <footer>
-      <div>copyright <%= DateTime.utc_now |> Map.fetch!(:year) %>, all rights reserved.</div>
     </footer>
   </body>
 </html>
