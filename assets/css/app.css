@@ -85,7 +85,7 @@ footer {
     font-size: small;
     text-align: center;
 
-    padding-top: 24px;
+    padding: 24px 0;
 }
 
 form {
