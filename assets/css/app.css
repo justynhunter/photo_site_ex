@@ -138,6 +138,7 @@ form {
     }
 
     & textarea {
+        font-family: "Rufina", serif;
         width: calc(100% - 18px);
         height: 250px;
 
@@ -146,6 +147,7 @@ form {
 
     & input {
         font-size: 16px;
+        font-family: "Rufina", serif;
         border: solid 1px #444;
         padding: 8px 8px;
         
