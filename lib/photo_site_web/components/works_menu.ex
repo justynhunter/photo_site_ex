@@ -11,7 +11,7 @@ defmodule WorksMenuComponent do
   def render(assigns) do
     ~H"""
     <div class="dropdown_menu">
-      <a href="#" phx-click="works_click" phx-target={@myself}>
+      <a href="#" phx-click="works_click" phx-click-away="works_click_away" phx-target={@myself}>
         work <span class="triangle_down"></span>
       </a>
       <ul class={@show_menu}>
@@ -31,5 +31,9 @@ defmodule WorksMenuComponent do
       end
 
     {:noreply, socket}
+  end
+
+  def handle_event("works_click_away", _params, socket) do
+    {:noreply, assign(socket, show_menu: "")}
   end
 end
