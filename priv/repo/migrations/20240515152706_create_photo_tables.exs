@@ -16,6 +16,7 @@ defmodule PhotoSite.Repo.Migrations.CreatePhotoTables do
       add :seq, :integer, null: false
       add :src, :string, null: false
       add :alt, :string, null: false
+      add :caption, :string
       add :created_at, :utc_datetime, default: fragment("NOW()")
     end
 
