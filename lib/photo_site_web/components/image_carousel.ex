@@ -14,21 +14,23 @@ defmodule ImageCarousel do
     ~H"""
     <div class="image_carousel">
       <button id="btn_prev" aria-label="previous photo" phx-click="prev" phx-target={@myself} />
-      <%= for photo <- @photos do %>
-        <img
-          loading={
-            if photo.seq == 1 do
-              "eager"
-            else
-              "lazy"
-            end
-          }
-          src={photo.src}
-          alt={photo.alt}
-          class={show_photo(@show, photo)}
-        />
-      <% end %>
       <button id="btn_next" aria-label="next photo" phx-click="next" phx-target={@myself} />
+      <%= for photo <- @photos do %>
+        <span class={show_photo(@show, photo)}>
+          <img
+            loading={
+              if photo.seq == 1 do
+                "eager"
+              else
+                "lazy"
+              end
+            }
+            src={photo.src}
+            alt={photo.alt}
+          />
+          <span><%= photo.caption %></span>
+        </span>
+      <% end %>
     </div>
     """
   end

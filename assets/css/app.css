@@ -51,7 +51,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding-bottom: 25px;
+    padding-bottom: 5px;
 
     & div.title {
         margin-right: 24px;
@@ -254,19 +254,19 @@ form {
 .image_carousel {
     position: relative;
     margin: auto;
+    margin-bottom: 10px;
     width: 100%;
     max-width: var(--page-max-width);
 
     opacity: 1;
     transition: opacity 400ms ease-out;
 
+
     & img {
         width: 100%;
         max-width: var(--page-max-width);
         aspect-ratio: 4 / 3;
         object-fit: contain;
-
-        margin-bottom: 10px;
     }
 
     & button {
@@ -286,7 +286,7 @@ form {
             cursor: w-resize;
         }
 
-        &:last-child {
+        &:nth-child(2) {
             right: 0;
             cursor: e-resize;
         }
