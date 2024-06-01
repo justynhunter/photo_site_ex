@@ -8,6 +8,6 @@ defmodule PhotoSite.Album do
     field :description, :string
     field :is_visible, :boolean
     field :created_at, :utc_datetime
-    has_many :photo, PhotoSite.Photo
+    has_many :photos, PhotoSite.Photo
   end
 end
