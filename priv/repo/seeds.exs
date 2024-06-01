@@ -16,27 +16,27 @@ alias PhotoSite.Photo
 
 unless Repo.exists?(Album) do
   default_album = %Album{
-    name: "the progress of man",
-    slug: "the-progress-of-man",
+    name: "southern progress",
+    slug: "southern-progress",
     seq: 1,
     description: "photos of human made structures decaying or being reclaimed by nature"
  }
 
   {_, default_album} = Repo.insert(default_album)
 
-  photo1 = %Photo{album_id: default_album.id, seq: 1, src: "https://photos.justynhunter.com/progress-of-man-1.webp", alt: "rotting house"}
-  photo2 = %Photo{album_id: default_album.id, seq: 2, src: "https://photos.justynhunter.com/progress-of-man-2.webp", alt: "chimney"}
-  photo3 = %Photo{album_id: default_album.id, seq: 3, src: "https://photos.justynhunter.com/progress-of-man-3.webp", alt: "rotting house"}
-  photo4 = %Photo{album_id: default_album.id, seq: 4, src: "https://photos.justynhunter.com/progress-of-man-4.webp", alt: "rotting house"}
-  photo5 = %Photo{album_id: default_album.id, seq: 5, src: "https://photos.justynhunter.com/progress-of-man-5.webp", alt: "rotting house"}
-  photo6 = %Photo{album_id: default_album.id, seq: 6, src: "https://photos.justynhunter.com/progress-of-man-6.webp", alt: "rotting house"}
-  photo7 = %Photo{album_id: default_album.id, seq: 7, src: "https://photos.justynhunter.com/progress-of-man-7.webp", alt: "rotting house"}
-  photo8 = %Photo{album_id: default_album.id, seq: 8, src: "https://photos.justynhunter.com/progress-of-man-8.webp", alt: "rotting house"}
-  photo9 = %Photo{album_id: default_album.id, seq: 9, src: "https://photos.justynhunter.com/progress-of-man-9.webp", alt: "rotting house"}
-  photo10 = %Photo{album_id: default_album.id, seq: 10, src: "https://photos.justynhunter.com/progress-of-man-10.webp", alt: "rotting house"}
-  photo11 = %Photo{album_id: default_album.id, seq: 11, src: "https://photos.justynhunter.com/progress-of-man-11.webp", alt: "rotting house"}
-  photo12 = %Photo{album_id: default_album.id, seq: 12, src: "https://photos.justynhunter.com/progress-of-man-12.webp", alt: "rotting house"}
-  photo13 = %Photo{album_id: default_album.id, seq: 13, src: "https://photos.justynhunter.com/progress-of-man-13.webp", alt: "rotting house"}
+  photo1 = %Photo{album_id: default_album.id, seq: 1, src: "https://photos.justynhunter.com/progress-of-man-1.webp", alt: "abandoned home", caption: "Alabama - 2024"}
+  photo2 = %Photo{album_id: default_album.id, seq: 2, src: "https://photos.justynhunter.com/progress-of-man-2.webp", alt: "overgrown building", caption: "Shaw, Mississippi - 2023"}
+  photo3 = %Photo{album_id: default_album.id, seq: 3, src: "https://photos.justynhunter.com/progress-of-man-3.webp", alt: "cars and a house", caption: "Lawrenceburg, Tennessee - 2023"}
+  photo4 = %Photo{album_id: default_album.id, seq: 4, src: "https://photos.justynhunter.com/progress-of-man-4.webp", alt: "abandoned home", caption: "Alabama - 2024"}
+  photo5 = %Photo{album_id: default_album.id, seq: 5, src: "https://photos.justynhunter.com/progress-of-man-5.webp", alt: "chair on overgrown porch", caption: "Alabama - 2024"}
+  photo6 = %Photo{album_id: default_album.id, seq: 6, src: "https://photos.justynhunter.com/progress-of-man-6.webp", alt: "house covered in vines", caption: "Alabama - 2024"}
+  photo7 = %Photo{album_id: default_album.id, seq: 7, src: "https://photos.justynhunter.com/progress-of-man-7.webp", alt: "collapsed mobile home", caption: "Mississippi - 2023"}
+  photo8 = %Photo{album_id: default_album.id, seq: 8, src: "https://photos.justynhunter.com/progress-of-man-8.webp", alt: "empty church", caption: "Guthrie, Kentucky - 2023"}
+  photo9 = %Photo{album_id: default_album.id, seq: 9, src: "https://photos.justynhunter.com/progress-of-man-9.webp", alt: "collapsed home", caption: "Ashland City, Tennessee - 2024"}
+  photo10 = %Photo{album_id: default_album.id, seq: 10, src: "https://photos.justynhunter.com/progress-of-man-10.webp", alt: "falling house", caption: "Lexington, Tennessee - 2023"}
+  photo11 = %Photo{album_id: default_album.id, seq: 11, src: "https://photos.justynhunter.com/progress-of-man-11.webp", alt: "closed department store", caption: "Jackson, Tennessee - 2023"}
+  photo12 = %Photo{album_id: default_album.id, seq: 12, src: "https://photos.justynhunter.com/progress-of-man-12.webp", alt: "house with hole in roof", caption: "Alabama - 2024"}
+  photo13 = %Photo{album_id: default_album.id, seq: 13, src: "https://photos.justynhunter.com/progress-of-man-13.webp", alt: "house with overgrown yard", caption: "Tennessee - 2023"}
 
   Repo.insert(photo1)
   Repo.insert(photo2)
