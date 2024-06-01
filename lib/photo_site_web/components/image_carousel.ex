@@ -28,7 +28,7 @@ defmodule ImageCarousel do
             src={photo.src}
             alt={photo.alt}
           />
-          <span><%= photo.caption %></span>
+          <span class="caption"><%= photo.caption %></span>
         </span>
       <% end %>
     </div>
