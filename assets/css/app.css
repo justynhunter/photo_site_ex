@@ -2,6 +2,7 @@
     --colors-bg: #fdfaf8;
     --colors-link: #800000;
     --colors-font: #333;
+    --colors-font-light: #666;
 
     --page-max-width: 1024px;
 }
@@ -54,7 +55,9 @@ header {
     padding-bottom: 5px;
 
     & div.title {
-        margin-right: 24px;
+        margin: 21px 24px 21px 0;
+        font-weight: bold;
+        font-size: 2rem;
     }
 
     & a {
@@ -113,7 +116,8 @@ hr {
 }
 
 footer {
-    font-size: .75rem;
+    color: var(--colors-font-light);
+    font-size: .66rem;
     text-align: center;
 
     padding: 24px 0;
@@ -261,6 +265,11 @@ form {
     opacity: 1;
     transition: opacity 400ms ease-out;
 
+    & .caption {
+        font-size: 1rem;
+        display: inline-block;
+        padding-top: 8px;
+    }
 
     & img {
         width: 100%;
@@ -299,7 +308,7 @@ form {
     margin: auto;
     text-align: left;
 
-    & h2, h3 {
+    & h1, h2, h3 {
         all: unset;
         text-decoration: underline;
         font-weight: bold;
